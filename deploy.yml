@@ -1,0 +1,18 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: 
+     -main
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Display message
+      run: echo "CI Pipeline is running"
+    - name: Run tests
+      run: echo "Building Application"
+    - name: Deploy
+      run: echo "Deployment successful"
